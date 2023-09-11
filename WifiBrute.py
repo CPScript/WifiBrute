@@ -6,6 +6,7 @@ try:
 except ModuleNotFoundError:
     os.system("pip install pywifi")
 from pywifi import const
+from subprocess import call
 from scripts.banner import banner2,banner,clear
 from scripts.sprint import sprint
 from scripts.colors import ran,y,r,g,c
@@ -59,9 +60,9 @@ rootCHEK()
 clear()
 
 sprint(f"\n\n{r} /---WARNING---\ {c} ")
-sprint(f"\n\n{y} Im ment to run in windows <3")
-sprint(f"\n\n{c} Run in Termux")
-sprint(f"\n\n{c} Run as R00T")
+sprint(f"\n\n{y} Please stay safe")
+sprint(f"\n\n{c} Please user responsibly")
+sprint(f"\n\n{c} Your responsible for your own actions")
 sprint(f"\n{g}Preparing...")
 time.sleep(2)
 clear()
