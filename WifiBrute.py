@@ -17,7 +17,7 @@ yes = ["y" , "yes"]
 no = ["no" , "n"]
 
 def help():
-    print(f"\t{r}-> {c}Usage:~ {y}python3 wifi-brute.py <wordlist>\n\t{r}-> {c}python3 wifi-brute.py {y}(it wil use default wordlist")
+    print(f"\t{r}-> {c}Usage:~ {y}python3 WifiBrute.py <wordlist>\n\t{r}-> {c}python3 WifiBrute.py {y}(it wil use default wordlist")
     exit()
 
 
@@ -42,8 +42,12 @@ def rootCHEK():
             print("Run this tool as root in Termux.")
             exit()
         if "Linux" in platform.platform():
-            print("Root your terminal for better performance")
+            sprint(f"{r}Automatically rooting your terminal for better performance")
+            print("Please wait...")
+            time.sleep("2")
             os.system("sudo su")
+            sprint(f"{g}Done!")
+            print(f"Please relaunch this software {r}<3{g}")
         if "Windows" in platform.platform():
             print("I am developed to work on Windows.")
 
