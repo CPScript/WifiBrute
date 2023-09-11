@@ -1,7 +1,7 @@
 <div align="center">
 
 # Wifi-Pass | Reupload
-A tool to crack a wifi password with a help of wordlist. This may take long to crack a wifi depending upon number of passwords your wordlist contains. I've make it as fast as possible
+A tool to crack a wifi password with a help of wordlist. This may take long to crack a wifi depending upon number of passwords your wordlist contains.
 
 
 
