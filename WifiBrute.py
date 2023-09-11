@@ -44,10 +44,10 @@ def rootCHEK():
         if "Linux" in platform.platform():
             sprint(f"{r}Automatically rooting your terminal for better performance")
             print("Please wait...")
-            time.sleep("2")
-            os.system("sudo su")
-            sprint(f"{g}Done!")
-            print(f"Please relaunch this software {r}<3{g}")
+            time.sleep(5)
+            print(" ")
+            sprint(f"Done!")
+            print(f"Please relaunch this software {r}<3")
         if "Windows" in platform.platform():
             print("I am developed to work on Windows.")
 
